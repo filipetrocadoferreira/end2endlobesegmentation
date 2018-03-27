@@ -1,5 +1,5 @@
 ## End-to-End Supervised Lung Lobe Segmentation
-In this project we present a fully automatic and supervised approach to the prolem of the segmentation of the pulmonary lobes from a CT scan.
+In this project we present a fully automatic and supervised approach to the problem of the segmentation of the pulmonary lobes from a CT scan.
 A 3D fully convolutional neural network was used based on the V-Net wich we called Fully Regularized V-Net (FRV-Net).
 This work was performed in the Biomedical Imaging group at C-BER centre of INESC TEC, Portugal and it resulted in the paper "End-to-End Supervised Lung
 Lobe Segmentation" accepted to the IJCNN2018 conference.
@@ -19,11 +19,11 @@ It allows you to set the specific regularization techniques and parameters of th
 	-train: Train data		  		(path)
 	-val  : Validation data		 		(path)
 	-lr   : Set the learning rate     		(float)
-	-load : load a pre-trained model  		(bolean)
+	-load : load a pre-trained model  		(boolean)
 	-aux  : Multi-task learning	  		(float - weight in the loss function)
 	-ds   : Number of Deep Supervisers		(int   - nº of layers)
-	-bn   : Set Batch normalization  		(bolean)
-	-dr   : Set Dropout              		(bolean)
+	-bn   : Set Batch normalization  		(boolean)
+	-dr   : Set Dropout              		(boolean)
 	-fs   : Number of initial of conv channels	(int)
 
 The train and validation datasets has to contain two folders A and B. where the folder A contains the CT scans and the B the correspondent ground-truth.
