@@ -1,12 +1,11 @@
 # -*- coding: utf-8 -*-
 """
 Created on Wed Apr 12 10:20:10 2017
-
 @author: fferreira
 """
 
 import numpy as np
-from util.vnet_triclass import vnet
+from model import vnet
 from futils.util import sample_scan
 from  scipy import ndimage
 from futils.vpatch import deconstruct_patch,reconstruct_patch
@@ -124,10 +123,6 @@ class v_segmentor(object):
         final_pred = ndimage.interpolation.zoom(masks,zoom_seq,order=0,prefilter=False)
         
        
-        
-        if len(pred_array)>1:   
-            return [np.reshape(final_pred,original_shape),np.reshape(final_pred_fissure,original_shape)]
-            
         
         return np.reshape(final_pred,original_shape)
         
